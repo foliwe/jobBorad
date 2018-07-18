@@ -3,12 +3,33 @@
   <head>
     <title>JobBoard</title>
     <%= csrf_meta_tags %>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+
+    <%= render 'shared/navbar' %>
+    <div class="container">
+
+      <%= yield %>
+      <div class="bg-primary">
+
+        <div class="container">
+
+          <div class="bg-primary py-4">
+            <ul class="list-inline">
+              <li class="list-inline-item"><a class="text-white"href="">Lorem ipsum</a></li>
+              <li class="list-inline-item"><a class="text-white"href="">Phasellus iaculis</a></li>
+              <li class="list-inline-item"><a class="text-white"href="">frsed iaculis</a></li>
+              <li class="list-inline-item float-right"><a class="text-white"href="">Sas job 2018</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </body>
 </html>
