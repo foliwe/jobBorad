@@ -1,14 +1,107 @@
 @import "bootstrap";
-
+@import "font-awesome";
 body{
-  font-family: 'Open Sans', sans-serif;
-  font-size: 15px;
+
+  font-family: 'Montserrat', sans-serif;
+  // font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
   background-color: #ecf0f1;
+  line-height: 29px;
+   .card a{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+}
+p.header{
+
+    color: #ff4407;
+    text-transform: uppercase;
+}
+.nav-tabs > li {
+    /* width = (100 / number of tabs). This example assumes 3 tabs. */
+    width:33.33333%;
+}
+.card-title{
+    color: #ff4407;
+    text-transform: uppercase;
+    font-size: 16px;
+
+}
+.form-control::-webkit-input-placeholder {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-style: italic;
 }
 .card-body{
 
-  font-size: 14px;
+  // font-size: 14px;
 }
-.nav-item {
-     width:31%;
-   }
+
+.spacer{
+  line-height: 2;
+  a{
+    text-decoration: underline;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+.hero_home {
+  background: #56CCF2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 100px;
+  padding-bottom: 50px;
+  height: 395px;
+  overflow: hidden;
+}
+.navbar{
+  background: #56CCF2;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2F80ED, #56CCF2);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2F80ED, #56CCF2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding-top: 25px;
+  color: #fff;
+  border-bottom: red;
+}
+.navbar-light .navbar-brand {
+    color: #fff;
+    font-weight: bold;
+    &:hover{
+      color: #fff;
+      opacity: 0.7;
+    }
+}
+.navbar-light .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+    &:hover{
+      color: #fff;
+      opacity: 0.7;
+    }
+  }
+.hero_about{
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.navbar-light .navbar-toggler {
+    border: none;
+}
+
+.options{
+
+  a {
+    color: #f8f9fa;
+    text-decoration:underline;
+    padding-left: 12px;
+    &:hover{
+      text-decoration:none;
+    }
+
+  }
+}
+
+.big_badge{
+  font-size: 20px;
+}
