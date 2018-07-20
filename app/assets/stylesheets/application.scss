@@ -13,7 +13,18 @@ body{
       text-decoration: none;
     }
   }
+}
 
+ul.pagination a{
+  text-decoration: none;
+}
+
+ul.no-line{
+    line-height: 10px;
+}
+.heading{
+   color: #ff4407;
+   font-size: 17px;
 }
 p.header{
 
@@ -43,7 +54,7 @@ p.header{
 .spacer{
   line-height: 2;
   a{
-    text-decoration: underline;
+    // text-decoration: underline;
     &:hover{
       text-decoration: none;
     }
@@ -93,7 +104,7 @@ p.header{
 
   a {
     color: #f8f9fa;
-    text-decoration:underline;
+    // text-decoration:underline;
     padding-left: 12px;
     &:hover{
       text-decoration:none;

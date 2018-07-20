@@ -5,13 +5,20 @@
     <form>
         <div class="row">
           <div class="col">
+
+            <div class="form-group">
+               <label for="formGroupExampleInput">Keywords or Reference</label>
+               <input type="text" class="form-control" placeholder="First name">
+            </div>
+          </div>
+          <div class="col">
+            <label for="formGroupExampleInput">Location or Postcode</label>
             <input type="text" class="form-control" placeholder="First name">
           </div>
           <div class="col">
-            <input type="text" class="form-control" placeholder="Last name">
-          </div>
-          <div class="col">
             <div class="form-group col">
+
+              <label for="inputState">Distance</label>
               <select id="inputState" class="form-control">
                 <option selected>Choose...</option>
                 <option>...</option>
@@ -19,15 +26,17 @@
             </div>
           </div>
           <div class="col">
-            <button type="button" class="btn btn-primary btn-sm">Search</button>
+
+            <br>
+              <p><button type="button" class="btn btn-primary btn-sm">Search</button></p>
           </div>
         </div>
         Seaerch in ..
         <div class="row">
           <div class="col">
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-              <label class="form-check-label" for="inlineRadio1">All</label>
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+              <label class="form-check-label" for="inlineRadio1 ">All</label>
             </div>
             <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
@@ -71,7 +80,7 @@
           </div>
         </div>
         <div class="">
-          <div class=""><a href="#demo" class="" data-toggle="collapse">Additional Filters</a></div>
+          <div class=""><a href="#demo" class="heading" data-toggle="collapse"> <h6>Additional Filters</h6></a></div>
         </div>
           <div id="demo" class="collapse my-4">
             <div class="d-flex">
