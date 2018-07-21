@@ -1,5 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
+
+$bold-color :#ff4407;
 body{
 
   font-family: 'Montserrat', sans-serif;
@@ -14,13 +16,19 @@ body{
     }
   }
 }
-
+hr{
+  width: 100%;
+}
 ul.pagination a{
   text-decoration: none;
 }
 
 ul.no-line{
     line-height: 10px;
+}
+
+.bolder{
+  color: $bold-color;
 }
 .heading{
    color: #ff4407;
