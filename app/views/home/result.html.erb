@@ -1,6 +1,6 @@
 <div class="container">
   <div class="p-2">
-    You are viewing search results for:
+    You are viewing search results for: <%= @param_s %>
   </div>
 
   <div class="d-flex justify-content-between py-3">
@@ -73,80 +73,7 @@
       </div>
 
       <div class="col">
-        <div class="card p-2">
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-               <h5><a href="">New Job For Nurse</a></h5>
-                  Primary Care
-                  <p>Central Advertising - General Practitioners, Belgravia - Victoria</p>
-              </div>
-              <div class="p-2">
-               <a href="">Add to favourite</a>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-            </div>
-
-            <hr>
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-               <h5><a href="">New Job For Nurse</a></h5>
-                  Primary Care
-                  <p>Central Advertising - General Practitioners, Belgravia - Victoria</p>
-              </div>
-              <div class="p-2">
-               <a href="">Add to favourite</a>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-            </div>
-              <hr>
-
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-               <h5><a href="">New Job For Nurse</a></h5>
-                  Primary Care
-                  <p>Central Advertising - General Practitioners, Belgravia - Victoria</p>
-              </div>
-              <div class="p-2">
-               <a href="">Add to favourite</a>
-              </div>
-            </div>
-            <div class="d-flex justify-content-between">
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-              <div class="p-2">
-                <span class="">Salary</span>: Negotiable <br>
-                <span class="">Posted</span>: 05/07/2018 <br>
-                <span class="">Job Type</span>: Fixed <br>
-              </div>
-            </div>
-
-
-        </div>
+        <%= render 'jobs/job' %>
       </div>
     </div>
   </div>

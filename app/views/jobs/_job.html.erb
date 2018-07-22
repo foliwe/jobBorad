@@ -1,0 +1,34 @@
+
+
+
+
+
+<div class="card p-2">
+
+<% @jobs_search.each do |job| %>
+    <div class="d-flex justify-content-between">
+      <div class="p-2">
+       <h5><a href=""> <%= link_to  job.title,job_path(job) %></a></h5>
+          Primary Care
+          <p> <%= job.employer %></p>
+      </div>
+      <div class="p-2">
+       <a href="">Add to favourite</a>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <div class="p-2">
+        <span class="">Salary</span>: <%= job.salary_from %> <br>
+        <span class="">Posted</span>: 05/07/2018 <br>
+        <span class="">Job Type</span>: <%= job.job_type %> <br>
+      </div>
+      <div class="p-2">
+        <span class="">Salary</span>: Negotiable <br>
+        <span class="">Posted</span>: 05/07/2018 <br>
+        <span class="">Job Ref</span>: <%= job.job_reference %> <br>
+      </div>
+    </div>
+    <hr>
+<%end %>
+
+</div>

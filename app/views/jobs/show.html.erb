@@ -1,16 +1,16 @@
 <div class="container mt-4 mb-3  py-4">
   <div class="card p-4">
     <div class="d-flex justify-content-between">
-      <div class=""><h5>Job Name</h5></div>
+      <div class=""><h5> <%= @job.title %> </h5></div>
       <div class=""><a href="#">Add to favourites</a></div>
     </div>
     <hr>
     <div class="row d-flex justify-content-between">
         <div class="col-8">
-           <h6 class="font-weight-bold">Job Reference: J180-A-18-227008</h6>
-             <span class="font-weight-bold">Employer:</span> <a href="#">Central Advertising - General Practitioners</a> <br>
+           <h6 class="font-weight-bold">  Job Reference: <%= @job.job_reference %> </h6>
+             <span class="font-weight-bold">Employer:</span> <%= link_to @job.employer%> <br>
              <span class="font-weight-bold">Location:</span>   Belgravia - Victoria <br>
-             <span class="font-weight-bold">Salary:</span> negotiable
+             <span class="font-weight-bold">Salary:</span> <%= @job.salary %>
 
                 <hr>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -34,8 +34,8 @@
         </div>
         <div class="col bg-light">
           <div class=" p-2">
-             <span class="font-weight-bold bolder">Job Type:</span> Fixed term (18 Months) <br>
-            <span class="font-weight-bold bolder">Pay Scheme:</span> Other <br>
+             <span class="font-weight-bold bolder">Job Type:</span> <%= @job.job_type %> <br>
+            <span class="font-weight-bold bolder">Pay Scheme:</span> <%= @job.pay_scheme %> <br>
             <span class="font-weight-bold bolder">  Staff Group:</span> Administrative & Clerical <br>
 
           </div>

@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get 'home/result'
     get 'home/job_directory'
     get 'home/show'
+    get 'result',to: "home#result"
 
+    resources :jobs
 end

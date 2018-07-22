@@ -5,9 +5,17 @@
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="col-6">
+
+        <%= form_tag result_path, method: :get do %>
         <div class="d-flex flex-column">
-          <div class="pb-4"><input class="form-control" type="text" size="100" placeholder="search job type, e.g capenter driver etc"></div>
-          <div class=" mt-2"><input class="form-control" type="text" size="100" placeholder="search location e.g town, postcode"></div>
+          <div class="pb-4">
+              <%= text_field_tag :search, params[:search], class: "form-control", id: "autolocation",placeholder:"search job type, e.g nurse, driver",size:"100" %>
+            </div>
+
+
+          <div class=" mt-2">
+              <%= text_field_tag :loc, params[:loc], class: "form-control", id: "autolocation",placeholder:"search location e.g town, postcode",size:"100"  %>
+          </div>
         </div>
 
         <hr>
@@ -65,8 +73,12 @@
       </div>
       <div class="col-2">
         <p><span class="big_badge badge badge-warning">17,313</span> live jobs </p>
-        <p><button type="button" class="btn btn-primary btn-block">Search</button><P>
+        <p>
+            <%= submit_tag 'Search Jobs',class:"btn btn-primary btn-block" %>
+        <P>
       </div>
+
+        <%end%>
       <div class="col align-self-center">
           <div class="">
             <%= image_tag('man.png',size:"300") %>
@@ -80,6 +92,8 @@
 <div class="container p-4">
     <div class="card p-4">
         <p class="">
+
+
           Lorem ipsum dolor sit amet, <a href="#">consectetur Register</a> adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
         </p>
      </div>
