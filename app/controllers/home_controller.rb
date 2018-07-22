@@ -15,8 +15,8 @@ class HomeController < ApplicationController
       else
         @jobs_search = Job.all
     end
-    @search = @listing_search.ransack(params[:q])
-    @listing = @search.result.page( params[:page]).per(15)
-    @arrlisting = @listing.to_a
+    # @search = @listing_search.ransack(params[:q])
+    # @listing = @search.result.page( params[:page]).per(15)
+    # @arrlisting = @listing.to_a
   end
 end
