@@ -24,17 +24,22 @@
   <div class="">
     <div class="row mb-4">
       <div class="col-4">
+
+        <%= search_form_for @search, url: result_path do |f| %>
         <div class="card p-2">
+
           <div class="form-group p-2">
-            <label for="exampleFormControlSelect1"> <h6>Distance</h6></label>
-            <select class="form-control" id="exampleFormControlSelect1">
-              <option>1 miles from me</option>
-              <option>2 miles from me</option>
-              <option>3 miles from me</option>
-              <option>4 miles from me</option>
-              <option>5 miles from me</option>
-            </select>
-          </div>
+            <%= f.label :title %>
+           <%= f.text_field :title_cont,placeholder: "Search a job title",class:"form-control"%>
+            </div>
+
+
+
+            <div class="form-group p-2">
+              <label for="formGroupExampleInput">Location or Postcode</label>
+              <input type="text" class="form-control" placeholder="First name">
+            </div>
+
            <div class="p-2">
             <form>
               <div class="form-group">
@@ -45,35 +50,27 @@
            </div>
           <div class=" p-2">
             <h6>Job Type</h6>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
-                Full Time
-              </label>
+
+
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck2">
-              <label class="form-check-label" for="defaultCheck2">
-                Part Time
-              </label>
+            <div class="form-group">
+              <%= f.select :job_type_cont,[['Full Time','Full Time'],['Part Time','Part Time'],['Permanent','Permanent']],{:include_blank => 'All....'},class:"form-control",id:"bed_room" %>
             </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" value="" id="defaultCheck3">
-              <label class="form-check-label" for="defaultCheck3">
-                Bank
-              </label>
-            </div>
-          </div>
+
+
+
 
             <div class="p-2">
-              <button type="button" class="btn btn-success btn-block">Filter</button>
+             <%= f.submit 'Filter',class:"btn btn-success btn-block" %>
             </div>
         </div>
 
+        <%end %>
       </div>
-
       <div class="col">
-        <%= render 'jobs/job' %>
+
+      <%= render partial: "jobs/job",locals: {jobs_search: @arrjob}%>
+
       </div>
     </div>
   </div>
