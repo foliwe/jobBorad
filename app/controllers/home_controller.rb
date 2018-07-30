@@ -19,4 +19,10 @@ class HomeController < ApplicationController
     @jobs = @search.result
     @arrjob = @jobs.to_a
   end
+
+
+  def search
+    @search = Job.ransack(params[:q])
+    @job = @search.result
+  end
 end

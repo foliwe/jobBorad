@@ -1,0 +1,14 @@
+<div class="container p-4">
+
+
+  <%#= @job_application.pay_scheme %>
+</div>
+<%= @job.title %>
+
+<div class="card my-4 p-3">
+  <%= form_with(model: [ @job, @job.job_applications.build ],local: true) do |f| %>
+  <%= f.text_field :applicant_name %> <br>
+
+  <%= f.submit %>
+  <%end%>
+</div>
