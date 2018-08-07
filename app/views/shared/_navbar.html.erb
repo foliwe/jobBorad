@@ -54,10 +54,13 @@
              My SAS Jobs
            </a>
            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-             <a class="dropdown-item" href="#">Action</a>
+
+             <%= link_to 'My Profile',user_user_profile_path(current_user),class:"dropdown-item" %>
+             <%= link_to 'Edit Profile',edit_user_user_profile_path(current_user),class:"dropdown-item" %>
+
              <a class="dropdown-item" href="#">Another action</a>
              <div class="dropdown-divider"></div>
-             <a class="dropdown-item" href="#">Something else here</a>
+            <%= link_to 'Settings',edit_user_registration_path,class:"dropdown-item" %>
            </div>
          </li>
 

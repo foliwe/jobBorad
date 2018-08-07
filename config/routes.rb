@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   devise_for :users
-    root to: 'home#index'
+  resources :users do
 
+    resource :user_profile,only: [:show,:edit,:update]
+  end
+    root to: 'home#index'
     get 'search',to: 'home#search'
     get 'home/result'
     get 'home/job_directory'
