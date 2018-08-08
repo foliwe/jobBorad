@@ -1,5 +1,7 @@
 class UserProfile < ApplicationRecord
   belongs_to :user
+  has_many :employment_histories
+  accepts_nested_attributes_for :employment_histories
   def save_on_update
    return false unless valid_for_activation?
    save!

@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180731131722) do
+ActiveRecord::Schema.define(version: 20180807232021) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "employment_histories", force: :cascade do |t|
+    t.string "employer"
+    t.string "job_title"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "left_bco"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "user_profile_id"
+  end
 
   create_table "job_applications", force: :cascade do |t|
     t.bigint "user_id"
