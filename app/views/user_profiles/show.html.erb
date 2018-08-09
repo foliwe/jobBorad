@@ -1,10 +1,27 @@
-
+<div class="bg-dark text-white p-2">
+  Personal Information
+</div>
 <%= current_user.email %><br>
 <%= @profile.title %> <br>
 <%= @profile.zip_code %> <br>
 <%= @profile.address %> <br>
 <%= @profile.phone %> <br>
+
+<div class="bg-dark text-white p-2">
+  Employment History
+</div>
+
+
  <% @profile.employment_histories.each do |em|%>
-    <%= em.job_title %> <br>
-    <%= em.employer %>
+    Job Title: <%= em.job_title %> <br>
+    Employer: <%= em.employer %> <br>
+ <%end%>
+
+
+ <div class="bg-dark text-white p-2">
+   Certificate and Trainning
+ </div>
+ <% @profile.qualifications.each do |ql|%>
+    Certificate: <%= ql.certificate_obtained %> <br>
+    Year/Obtained: <%= ql.date_obtained.strftime(" %m/%d/%Y")  %> <br>
  <%end%>

@@ -41,7 +41,8 @@ end
           :phone,
           :address,
           :zip_code,
-          employment_histories_attributes: [:id, :job_title, :employer, :_destroy]
+          employment_histories_attributes: [:id, :job_title, :employer, :_destroy],
+          qualifications_attributes: [:id, :certificate_obtained, :date_obtained, :_destroy]
         )
   end
 end
