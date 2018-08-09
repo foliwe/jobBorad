@@ -1,0 +1,59 @@
+
+
+
+    <%= form_for @profile, url: {action: "update"} do |f| %>
+
+    <div class="form-group p-">
+      <%= f.label :title %>
+      <%= f.select :title,[['Mr','Mr'],['Mrs','Mrs']],{ include_blank: false }, class:"custom-select" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :family_name %>
+      <%= f.text_field :first_name,class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address,class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :zip_code %>
+      <%= f.text_field :zip_code,class:"form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :phone %>
+      <%= f.text_field :phone,class:"form-control" %>
+    </div>
+
+
+    <div class="card ">
+      <div class="card-header text-center text-white bg-dark"><h5>Employment History</h5> </div>
+        <div id="employments ">
+          <%= f.fields_for :employment_histories do |ff| %>
+            <%= render 'employment_history_fields',f: ff %>
+            <% end %>
+            <div class="link">
+              <%= link_to_add_association 'add address', f, :employment_histories %>
+            </div>
+        </div>
+
+
+      </div>
+    <div class="card ">
+      <div class="card-header text-center text-white bg-dark"><h5>Qualification</h5> </div>
+        <div id="qualifications ">
+          <%= f.fields_for :qualifications do |ff| %>
+            <%= render 'qualification_fields',f: ff %>
+            <% end %>
+            <div class="link">
+              <%= link_to_add_association 'Add Qualification', f, :qualifications %>
+            </div>
+        </div>
+
+
+      </div>
+
+
+
+
+     <%= f.submit %>
+      <%end %>

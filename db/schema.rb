@@ -10,17 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180729151854) do
+ActiveRecord::Schema.define(version: 20180809195941) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "employment_histories", force: :cascade do |t|
+    t.string "employer"
+    t.string "job_title"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.string "left_bco"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "user_profile_id"
+  end
+
   create_table "job_applications", force: :cascade do |t|
     t.bigint "user_id"
     t.bigint "job_id"
-    t.string "applicant_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "where_did_to_see_vacancy"
     t.index ["job_id"], name: "index_job_applications_on_job_id"
     t.index ["user_id"], name: "index_job_applications_on_user_id"
   end
@@ -45,6 +57,34 @@ ActiveRecord::Schema.define(version: 20180729151854) do
     t.string "title"
   end
 
+  create_table "qualifications", force: :cascade do |t|
+    t.datetime "date_obtained"
+    t.string "certificate_obtained"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "user_profile_id"
+  end
+
+  create_table "user_profiles", force: :cascade do |t|
+    t.bigint "user_id"
+    t.string "title"
+    t.string "mobile"
+    t.string "family_name"
+    t.string "first_name"
+    t.string "middle_name"
+    t.string "ni_number"
+    t.string "address"
+    t.string "town"
+    t.string "state"
+    t.string "country"
+    t.string "zip_code"
+    t.string "phone"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_profiles_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -67,4 +107,5 @@ ActiveRecord::Schema.define(version: 20180729151854) do
 
   add_foreign_key "job_applications", "jobs"
   add_foreign_key "job_applications", "users"
+  add_foreign_key "user_profiles", "users"
 end
