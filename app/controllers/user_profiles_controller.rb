@@ -2,6 +2,11 @@ class UserProfilesController < ApplicationController
 
 before_action :authenticate_user!
 
+def new
+
+
+end
+
   def show
 
     # @user = UserProfile.find(params[:user_id])
@@ -16,6 +21,7 @@ before_action :authenticate_user!
   end
 
   def update
+    # byebug
       @profile = current_user.user_profile
     respond_to do |format|
       if @profile.update profile_params
@@ -30,6 +36,12 @@ before_action :authenticate_user!
 
   private
   def profile_params
-    params.require(:user_profile).permit(:title,:mobile,employment_histories:[:job_title,:employer])
+    params.require(:user_profile).permit(
+          :title,
+          :phone,
+          :address,
+          :zip_code,
+          employment_histories_attributes: [:id, :job_title, :employer, :_destroy]
+        )
   end
 end

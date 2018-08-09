@@ -12,5 +12,5 @@ class User < ApplicationRecord
     self.create_user_profile!
   end
 
-  
+
 end

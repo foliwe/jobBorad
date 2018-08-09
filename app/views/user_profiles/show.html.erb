@@ -1,5 +1,10 @@
 
-<%= @profile.user.email %><br>
-
-<%= @profile.family_name %> <br>
+<%= current_user.email %><br>
 <%= @profile.title %> <br>
+<%= @profile.zip_code %> <br>
+<%= @profile.address %> <br>
+<%= @profile.phone %> <br>
+ <% @profile.employment_histories.each do |em|%>
+    <%= em.job_title %> <br>
+    <%= em.employer %>
+ <%end%>

@@ -60,3 +60,4 @@ gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'devise', '~> 4.4', '>= 4.4.3'
 gem 'ransack'
+gem "cocoon"
